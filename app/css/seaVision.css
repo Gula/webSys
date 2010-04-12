@@ -1,0 +1,134 @@
+/* general styles */
+body {
+	background-color: #DFD;
+	text-shadow: 0 1px 0 #fff;
+  font-family: sans-serif;
+}
+
+
+/* layout */
+#wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+
+}
+
+
+.main {
+  
+}
+
+.main > section {
+  border: 1px solid #aaa;
+  -webkit-border-radius: 12px;
+  padding: 5px;
+  background-color: #EFE;
+}
+
+.sensors {
+  width: 60%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.commands {
+  width: 35%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
+
+
+/* sensors */
+.sensor {
+	width: 200px; height: 100px;
+	border: 1px solid #0AF;
+	background: #F5FFF5;
+	margin: 5px;
+	text-align: left;
+	-webkit-border-radius: 8px;
+	-webkit-box-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+}
+
+.sensor h3 {
+  margin: 0; padding: 0;
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+  display: inline-block;
+  -webkit-border-radius: 6px 0 3px 0;
+  background-color: #0AF;
+  color: #fff;
+  text-align: center;
+  font: normal normal normal 14px/30px Helvetica;
+}
+.sensor h4 {
+  margin: 0; padding: 0;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  color: #05A;
+  font: normal normal normal 14px/30px Helvetica;
+}
+
+.sensor > div {
+  margin: 5px;
+  color: #555;
+  font-size: 14px;
+}
+
+.sensor > div > span {
+  color: #000;
+}
+
+.someTitle {
+	color: #F00;
+}
+
+.blq {
+	text-align: center;
+	height: 20px;
+	border: 1px solid #AAA;
+	background: #EFE;
+	margin: 5px;
+	padding: 5px;
+}
+
+.blq a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #00A;
+}
+
+.blq a:hover {
+	color: #04F
+}
+
+.blq p {
+	margin: 0; padding: 0;
+}
+
+#count {
+	font-weight: bold;
+	color: #400;
+}
+
+
+/* specifics sensors */
+#sensor_1, #sensor_2 {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Grafo */
+.grafo {
+  background: #fff;
+  border: 1px solid #DDD;
+  -webkit-border-radius: 4px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>SeaVision</title>
+
+    <link rel="stylesheet" href="css/seaVision.css" type="text/css" />
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/mootools-1.2.4-core-yc.js"></script>
+    <script type="text/javascript" src="js/mootools-1.2.4.4-more.js"></script>
+
+    <script type="text/javascript" src="js/xDevice.js"></script>
+    <script type="text/javascript" src="js/webSys.js"></script>
+
+  </head>
+
+  <body>
+    <section id="wrapper">
+      <section class="header">
+        <h1>SeaVision</h1>
+      </section>
+
+      <section class="main">
+        <section class="sensors">
+          <div class="sensor" id="sensor_1">
+            <h3 id="channel1">01</h3>
+            <h4>Real</h4>
+            <div>measure: <span id="measure1">00.0</span> <span id="unit1"></span></div>
+          </div>
+
+          <div class="sensor" id="sensor_2">
+            <h3 id="channel2">02</h3>
+            <h4>Sent</h4>
+            <div>measure: <span id="measure2">00.0</span> <span id="unit2"></span></div>
+          </div>
+
+          <!-- Grafo SVG -->
+          <div class="grafo" id="grafo"></div>
+
+
+          <div class="sensor" id="sensor_3">
+            <h3 id="channel3">03</h3>
+            <div>measure: <span id="measure3">00.0</span> <span id="unit3"></span></div>
+          </div>
+
+          <div class="sensor" id="sensor_4">
+            <h3 id="channel4">04</h3>
+            <div>measure: <span id="measure4">00.0</span> <span id="unit4"></span></div>
+          </div>
+
+          <div class="sensor" id="sensor_5">
+            <h3 id="channel5">05</h3>
+            <div>measure: <span id="measure5">00.0</span> <span id="unit5"></span></div>
+          </div>
+        </section>
+
+        <section class="commands">
+          <div id="command-box">
+            <form action="/cgi-bin/webSysClient.cgi" method="POST" id="command-form">
+              <div><label>Command 1: <input name="cmd00" size="25" maxlength="10"></label></div>
+            </form>
+
+            <div id="server-response"></div>
+          </div>
+
+          <div class="blq">
+            <a href="#" title="Start receiving data" id="loadStart">Start</a>
+		|
+            <a href="#" id="loadStop" title="Stop data">Stop</a>
+          </div>
+
+          <div class="blq">
+            <p>Count: <span id="count">0</span> s</p>
+          </div>
+
+          <div class="blq">
+            <p>Download <a href="data/misionData.zip" title="Download mision data">Mision Data</a></p>
+          </div>
+        </section>
+
+      </section>
+    </section>
+
+
+  </body>
+</html>

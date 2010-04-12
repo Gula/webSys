@@ -1,0 +1,40 @@
+README FILE:
+
+1. INTRODUCTION
+
+These tools are intended for creating a program that can be interfaced via a web browser that supports javascript.
+Once created, the program must run on a computer that also runs a http server (such as Apache).
+
+For the program to be interfaced, a webpage is required. The webpage implements, through javascript and CGI, the
+communication with the program.
+
+2. COMPILATION OF THE DEMO
+
+To compile the demo, uncompress the tar and do the following in a terminal:
+
+cp -r app /var/www/ 
+
+cd myProject
+make clean
+make webSysLib
+make all
+cp ../webSysDemo /usr/lib/cgi-bin
+cp ../webSysBinaries/webSysClient.cgi /usr/lib/cgi-bin
+cp ../webSysBinaries/webSys.conf /usr/lib/cgi-bin
+
+3. USAGE
+
+First, edit /usr/lib/cgi-bin/webSys.conf so it points to the right files.
+Then, in a terminal:
+
+cd /usr/lib/cgi-bin
+./webSysDemo &
+
+(At this stage, if you do in a terminal
+
+more var/www/yourPathToTheFile/sensors01.json
+
+you should see the data changing.)
+
+Open a web browser (Chrome) and go to http://localhost/app/index.html
+
